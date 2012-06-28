@@ -1,0 +1,107 @@
+%% Use one of the following if writing a thesis/dissertation.
+% \documentclass[thesis]{uathesis}
+\documentclass[dissertation]{uathesis}
+
+%% Basic packages you'll probably want to use.
+\usepackage{graphicx}                 %% For using \includegraphics{}
+\usepackage{cite}                     %% For sorting/collapsing citations.
+\usepackage{color}                    %% For colors used in listings.
+\usepackage{listings}                 %% Code listings (for engineers)
+\usepackage[bookmarks=true]{hyperref} %% Hyperlinks table of content, etc.
+
+%% Includes
+\input{inc/glossary.tex}
+% TODO: If you have any special commands defined, include them here.
+
+
+%% Required parameters (these default to undefined)
+\author{Joe Somebody}       %% Your name!
+\adviser{The Boss}   %% Your adviser/committee chair!
+
+%% The people on your committee.
+%% Use \and to break them up between lines.
+\committee{
+  Andy Smith \and
+  Billy Smith \and
+  Carl Smith
+}
+
+%% Note the use of \and to create line breaks and the
+%% inverted pyramid style requested by the graduate school.
+%% You have to do this manually. Sorry.
+\title{Title of the thesis: the top line should be the longest \and
+  the middle one is second longest \and
+  and the last is shortest}
+
+\degree{Doctor of Philosophy}   %% Change to suit your degree.
+\department{Computer Science}   %% Change to suit your department.
+
+%% These are body text paragraphs to be placed in the front matter.
+\abstract{
+%  There is such a thing as \gls{tmi}. My brother once said that \gls{tmi}
+%  is what drives the world, some times causing fits of \gls{lol}. If one
+%  is to get in a especially deep fit of the \glspl{lol}, then one could
+%  find oneself \gls{rotflol}.
+}
+
+\dedication{
+  Type or \\input{} your dedication here.
+}
+
+\acknowledgments{
+  Type or \\input{} your acknowledgments here.
+}
+
+%% Optional parameters. The default usage is shown.
+\university{The University of Alabama}
+\school{Graduate School}
+\gradyear{\the\year}
+\place{Tuscaloosa, Alabama}
+
+\begin{document}
+
+%% Makes the title, abstract, dedication, table of contents, etc.
+%% Must be before \begin{body}
+\makefrontmatter
+
+%% BODY PORTION
+%% The bulk of your thesis.
+%% Begin your \chapter's here.
+
+\begin{body}
+
+%% Body chapters.
+\chapter{INTRODUCTION}
+Type or \\input{} a chapter. \cite{rocket-themoon2167}
+
+\chapter{LITERATURE REVIEW}
+Type or \\input{} a chapter. \cite{rocket-themoon2167}
+
+\chapter{APPROACH}
+Type or \\input{} a chapter. \cite{rocket-themoon2167}
+
+\chapter{EXPERIMENT}
+Type or \\input{} a chapter. \cite{rocket-themoon2167}
+
+\chapter{DISCUSSION}
+Type or \\input{} a chapter. \cite{rocket-themoon2167}
+
+\chapter{CONCLUSION}
+Type or \\input{} a chapter. \cite{rocket-themoon2167}
+
+%% Currently adding the references to the table of contents is not automatic
+%% So we are forced to do it manually.
+\addcontentsline{toc}{chapter}{REFERENCES}
+
+%% Generates the bibliography.
+\bibliographystyle{plain}
+\bibliography{thesis-template}
+
+
+%% Appendix chapters.
+\appendix
+
+\chapter{A BIG APPENDIX}
+
+\end{body}
+\end{document}
