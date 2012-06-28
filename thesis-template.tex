@@ -1,3 +1,9 @@
+%%
+%% THESIS/DISSERTATION TEMPLATE FOR THE UNIVERSITY OF ALABAMA.
+%%
+%% This example is written by Paul Kilgo. It highlights
+%%
+
 %% Use one of the following if writing a thesis/dissertation.
 % \documentclass[thesis]{uathesis}
 \documentclass[dissertation]{uathesis}
@@ -38,18 +44,20 @@
 
 %% These are body text paragraphs to be placed in the front matter.
 \abstract{
-%  There is such a thing as \gls{tmi}. My brother once said that \gls{tmi}
-%  is what drives the world, some times causing fits of \gls{lol}. If one
-%  is to get in a especially deep fit of the \glspl{lol}, then one could
-%  find oneself \gls{rotflol}.
+  There is such a thing as \gls{tmi}. My brother once said that \gls{tmi}
+  is what drives the world, some times causing fits of \gls{lol}. If one
+  is to get in a especially deep fit of the \glspl{lol}, then one could
+  find oneself \gls{rotflol}.
+
+  By the way, \gls{alpha} and \gls{beta} are Greek letters.
 }
 
 \dedication{
-  Type or \\input{} your dedication here.
+  Type or input{} your dedication here.
 }
 
 \acknowledgments{
-  Type or \\input{} your acknowledgments here.
+  Type or input{} your acknowledgments here.
 }
 
 %% Optional parameters. The default usage is shown.
@@ -72,22 +80,39 @@
 
 %% Body chapters.
 \chapter{INTRODUCTION}
-Type or \\input{} a chapter. \cite{rocket-themoon2167}
+
+Take a look at Figure \ref{fig:shapes}. It has some shapes. They're very
+complex and interesting shapes. I could gaze at them for hours.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=5.0in]{fig/shapes.pdf}
+  \caption{Some shapes which I find very interesting.}
+  \label{fig:shapes}
+\end{figure}
 
 \chapter{LITERATURE REVIEW}
-Type or \\input{} a chapter. \cite{rocket-themoon2167}
+Type or input{} a chapter. \cite{rocket-themoon2167}
 
 \chapter{APPROACH}
-Type or \\input{} a chapter. \cite{rocket-themoon2167}
+Take a look at Table \ref{tab:love-shapes}. It shows how much I love certain
+shapes.
+
+\begin{table}
+  \centering
+  \input{tab/love-shapes.tex}
+  \caption{Shapes and corresponding love in Love Standard Units (LSU).}
+  \label{tab:love-shapes}
+\end{table}
 
 \chapter{EXPERIMENT}
-Type or \\input{} a chapter. \cite{rocket-themoon2167}
+Type or input{} a chapter. \cite{rocket-themoon2167}
 
 \chapter{DISCUSSION}
-Type or \\input{} a chapter. \cite{rocket-themoon2167}
+Type or input{} a chapter. \cite{rocket-themoon2167}
 
 \chapter{CONCLUSION}
-Type or \\input{} a chapter. \cite{rocket-themoon2167}
+Type or input{} a chapter. \cite{rocket-themoon2167}
 
 %% Currently adding the references to the table of contents is not automatic
 %% So we are forced to do it manually.
