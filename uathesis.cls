@@ -1,3 +1,32 @@
+
+% University of Alabama MS/PhD thesis/dissertation LaTeX Class File
+%
+% Copyright (c) 2012 Paul Kilgo
+% The latest version of this file may be obtained from
+%   https://github.com/OEP/uathesis
+%
+% License: LaTeX Project Public License (www.latex-project.org/lppl.txt)
+%   Executive summary:
+%       This software is copyright but you are granted a license which gives
+%       you, the "user" of the software, legal permission to copy, distribute,
+%       and/or modify the software. However, if you modify the software and
+%       then distribute it (even just locally) you must change the name of the
+%       software to avoid confusion.
+%
+% OR (dual-licensed)
+%
+% License: GNU Lesser General Public License (www.gnu.org/licenses/lgpl.html)
+%
+% Author Information:
+%   Paul Kilgo
+%   The University of Alabama
+%   paulkilgo@gmail.com
+%
+% Any change requests are appreciated if proposed through Github. Any bug
+% reporting should also be done through Github as well.
+%
+% Happy writing!
+
 \NeedsTeXFormat{LaTeX2e}
 
 \ProvidesClass{uathesis}
@@ -21,10 +50,6 @@
 \usepackage{textcase}
 \usepackage{tocloft}
 \usepackage[nonumberlist,xindy,toc]{glossaries}
-
-%% Package graveyard. Leave commented out until it is known that you need it.
-%\usepackage{changepage}
-%\usepackage{fancyhdr}
 
 \renewcommand{\glossaryname}{LIST OF ABBREVIATIONS AND SYMBOLS}
 

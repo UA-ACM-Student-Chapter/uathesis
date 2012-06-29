@@ -67,6 +67,20 @@ figure it out.
 
     \chapter{MY CHAPTER NAME IN ALL CAPS}
 
+## List of Abbreviations and Symbols
+
+The template also asks that you include a glossary of abbreviations and
+symbols. The document class handles this for you via the use of the
+`glossaries` LaTeX package. You may find the documentation for it here:
+
+http://tug.ctan.org/tex-archive/macros/latex/contrib/glossaries/
+
+The user guide may be found here:
+
+http://mirrors.ctan.org/macros/latex/contrib/glossaries/glossaries-user.pdf
+
+Some example usage may also be found in the included example.
+
 ## Tables and Figures
 
 Tables and Figures automatically get listed in a "List of Tables" or "List of
