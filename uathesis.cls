@@ -116,6 +116,14 @@
 %% Rename bibliography
 \renewcommand{\bibname}{References}
 
+%% Do not add vspace between chapters
+%% Hack taken from:
+%% http://tex.stackexchange.com
+%% /questions/784/how-to-change-the-line-spacing-in-my-list-of-figures
+\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
+\addtocontents{lof}{\protect\noaddvspace}
+\addtocontents{lot}{\protect\noaddvspace}
+
 % Make the front matter...
 \newcommand{\makefrontmatter}{
   \thispagestyle{empty}
