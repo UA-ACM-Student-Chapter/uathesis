@@ -14,7 +14,6 @@
 \usepackage{cite}                     %% For sorting/collapsing citations.
 \usepackage{color}                    %% For colors used in listings.
 \usepackage{listings}                 %% Code listings (for engineers)
-\usepackage[bookmarks=true]{hyperref} %% Hyperlinks table of content, etc.
 
 %% Includes
 \input{inc/glossary.tex}
@@ -117,10 +116,13 @@ Type or input{} a chapter. \cite{rocket-themoon2167}
 
 %% Currently adding the references to the table of contents is not automatic
 %% So we are forced to do it manually.
+
+%% TODO: This is not a fix. This line has to come after the \chapter command
+%% in order for the correct page to be inferred for the table of contents.
 \addcontentsline{toc}{chapter}{REFERENCES}
 
 %% Generates the bibliography.
-\bibliographystyle{plain}
+\bibliographystyle{uathesis-plain}
 \bibliography{thesis-template}
 
 
