@@ -3,10 +3,10 @@
 This is a LaTeX template for students writing a thesis at The University of
 Alabama. This is the class file I created and ended up using for my MS work.
 It is a reverse-engineering of the style guidelines posted by the graduate
-school and a few other theses I've seen. I worked primarily from this
-guideline:
+school and a few other theses I've seen. I worked primarily from [this
+sample][guidelines].
 
-http://www.graduate.ua.edu/etd/td\_sample.pdf
+[guidelines]: http://services.graduate.ua.edu/etd/td_sample.pdf
 
 ## Document Preamble
 
