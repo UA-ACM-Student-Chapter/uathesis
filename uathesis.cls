@@ -1,4 +1,3 @@
-
 % University of Alabama MS/PhD thesis/dissertation LaTeX Class File
 %
 % Copyright (c) 2012 Paul Kilgo
@@ -166,26 +165,28 @@
 
     \begin{frontmatter}
 
-    \chapter*{ABSTRACT}
+	\topskip=1in
+    \chapter*{\textbf{ABSTRACT}}
     \addcontentsline{toc}{chapter}{ABSTRACT}
+	\topskip=-1in
 
     \@abstract
 
-    \chapter*{DEDICATION}
+\topskip=1in
+    \chapter*{\textbf{DEDICATION}}
     \addcontentsline{toc}{chapter}{DEDICATION} 
-
     \@dedication
-
+\pagebreak
     %% Print everything in the glossary.
     \glsaddall
-    \printglossary
+    \printglossary[toctitle={LIST OF ABBREVIATIONS AND SYMBOLS},title={\textbf{LIST OF ABBREVIATIONS AND SYMBOLS}}]
     \glsresetall
 
-    \chapter*{ACKNOWLEDGMENTS}
+    \chapter*{\textbf{ACKNOWLEDGMENTS}}
     \addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
 
     \@acknowledgments
-
+\topskip=-1in
     %% ToC entries have double spaced but only longer-than-1-lines have single space.
     \renewcommand\cftchapafterpnum{\vskip12pt}
     \renewcommand\cftsecafterpnum{\vskip12pt}
