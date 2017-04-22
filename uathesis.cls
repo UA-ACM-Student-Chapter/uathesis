@@ -60,6 +60,8 @@
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftchappagefont}{}
 
+\renewcommand{\contentsname}{\textbf{CONTENTS}}
+
 \renewcommand{\cftloftitlefont}{\pagebreak\hfill\MakeTextUppercase}
 \renewcommand{\cftafterloftitle}{\hfill}
 
