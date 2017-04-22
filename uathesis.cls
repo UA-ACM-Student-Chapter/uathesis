@@ -48,7 +48,9 @@
 \usepackage{setspace}
 \usepackage{textcase}
 \usepackage{tocloft}
-\usepackage[nonumberlist,xindy,toc]{glossaries}
+\usepackage[nonumberlist,xindy,toc,nogroupskip]{glossaries}
+\usepackage{glossary-superragged}
+\setglossarystyle{superragged}
 
 \renewcommand{\glossaryname}{LIST OF ABBREVIATIONS AND SYMBOLS}
 
