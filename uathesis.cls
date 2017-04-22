@@ -60,6 +60,9 @@
 \renewcommand{\cftdot}{.}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftchappagefont}{}
+\renewcommand\cftchappresnum{CHAPTER }
+\cftsetindents{chapter}{0em}{6.5em}
+\setlength{\cftbeforechapskip}{0pt}
 
 \renewcommand{\contentsname}{\textbf{CONTENTS}}
 

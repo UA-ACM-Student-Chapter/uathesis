@@ -18,7 +18,7 @@
 %% Includes
 \input{inc/glossary.tex}
 % TODO: If you have any special commands defined, include them here.
-
+\usepackage[titletoc]{appendix}%
 
 %% Required parameters (these default to undefined)
 \author{Joe Somebody}       %% Your name!
@@ -125,11 +125,15 @@ Type or input{} a chapter. \cite{rocket-themoon2167}
 \bibliographystyle{uathesis-plain}
 \bibliography{thesis-template}
 
-
-%% Appendix chapters.
-\appendix
+\begin{appendices}
+\addtocontents{toc}{\setlength{\cftchapnumwidth}{1em}}
+\renewcommand{\appendixname}{APPENDIX}
+\addtocontents{toc}{\setcounter{tocdepth}{0}}
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{}}
 
 \chapter{A BIG APPENDIX}
+
+\end{appendices}
 
 \end{body}
 \end{document}
