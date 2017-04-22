@@ -53,7 +53,7 @@
 
 \renewcommand{\glossaryname}{LIST OF ABBREVIATIONS AND SYMBOLS}
 
-\renewcommand{\cfttoctitlefont}{\pagebreak\hfill\MakeTextUppercase}
+\renewcommand{\cfttoctitlefont}{\pagebreak\vspace*{1in}\hspace{.43\linewidth}\MakeTextUppercase}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftchapfont}{ }
 \renewcommand{\cftdot}{.}
