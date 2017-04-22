@@ -14,7 +14,7 @@
 \usepackage{cite}                     %% For sorting/collapsing citations.
 \usepackage{color}                    %% For colors used in listings.
 \usepackage{listings}                 %% Code listings (for engineers)
-
+\usepackage[numbers]{natbib}
 %% Includes
 \input{inc/glossary.tex}
 % TODO: If you have any special commands defined, include them here.
@@ -119,7 +119,7 @@ Type or input{} a chapter. \cite{rocket-themoon2167}
 
 %% TODO: This is not a fix. This line has to come after the \chapter command
 %% in order for the correct page to be inferred for the table of contents.
-\addcontentsline{toc}{chapter}{REFERENCES}
+\renewcommand{\bibsection}{\topskip=1in\chapter*{REFERENCES}\topskip=0in \addcontentsline{toc}{chapter}{REFERENCES}}
 
 %% Generates the bibliography.
 \bibliographystyle{uathesis-plain}
