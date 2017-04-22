@@ -195,11 +195,22 @@
       \tableofcontents
     \end{spacing}
 
+\renewcommand{\listtablename}{\textbf{LIST OF TABLES}}
+        \begin{spacing}{1}
+\renewcommand{\cftlottitlefont}{\vspace*{0in}\hspace{.40\linewidth}\MakeTextUppercase}  
+\pagebreak
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
     \listoftables 
-    \addcontentsline{toc}{chapter}{LIST OF TABLES} 
+    \end{spacing}
+     
 
-    \listoffigures
-    \addcontentsline{toc}{chapter}{LIST OF FIGURES} 
+		\renewcommand{\listfigurename}{\textbf{LIST OF FIGURES}}
+\renewcommand{\cftloftitlefont}{\vspace*{0in}\hspace{.40\linewidth}\MakeTextUppercase}  
+\pagebreak
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\begin{spacing}{1}
+\listoffigures
+\end{spacing}
 
     \end{frontmatter}
 
