@@ -41,7 +41,7 @@
   \PassOptionsToClass{\CurrentOption}{report}%
 }
 \ProcessOptions\relax
-\LoadClass[a4paper,12pt]{report}
+\LoadClass[letter,12pt]{report}
 
 % margins
 \usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
