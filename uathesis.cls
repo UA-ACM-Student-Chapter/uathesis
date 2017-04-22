@@ -184,7 +184,13 @@
 
     \@acknowledgments
 
-    \tableofcontents
+    %% ToC entries have double spaced but only longer-than-1-lines have single space.
+    \renewcommand\cftchapafterpnum{\vskip12pt}
+    \renewcommand\cftsecafterpnum{\vskip12pt}
+    \renewcommand\cftsubsecafterpnum{\vskip12pt}
+    \begin{spacing}{1}
+      \tableofcontents
+    \end{spacing}
 
     \listoftables 
     \addcontentsline{toc}{chapter}{LIST OF TABLES} 
