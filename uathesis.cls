@@ -48,7 +48,7 @@
 \usepackage{setspace}
 \usepackage{textcase}
 \usepackage{tocloft}
-\usepackage[nonumberlist,xindy,toc,nogroupskip]{glossaries}
+\usepackage[nonumberlist,xindy,toc,nopostdot,nogroupskip]{glossaries}
 \usepackage{glossary-superragged}
 \setglossarystyle{superragged}
 
