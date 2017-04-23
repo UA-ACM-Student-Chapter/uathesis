@@ -1,4 +1,3 @@
-
 % University of Alabama MS/PhD thesis/dissertation LaTeX Class File
 %
 % Copyright (c) 2012 Paul Kilgo
@@ -41,7 +40,7 @@
   \PassOptionsToClass{\CurrentOption}{report}%
 }
 \ProcessOptions\relax
-\LoadClass[a4paper,12pt]{report}
+\LoadClass[letter,12pt]{report}
 
 % margins
 \usepackage[top=1in,bottom=1in,left=1in,right=1in]{geometry}
@@ -49,16 +48,23 @@
 \usepackage{setspace}
 \usepackage{textcase}
 \usepackage{tocloft}
-\usepackage[nonumberlist,xindy,toc]{glossaries}
+\usepackage[nonumberlist,xindy,toc,nopostdot,nogroupskip]{glossaries}
+\usepackage{glossary-superragged}
+\setglossarystyle{superragged}
 
 \renewcommand{\glossaryname}{LIST OF ABBREVIATIONS AND SYMBOLS}
 
-\renewcommand{\cfttoctitlefont}{\pagebreak\hfill\MakeTextUppercase}
+\renewcommand{\cfttoctitlefont}{\pagebreak\vspace*{1in}\hspace{.43\linewidth}\MakeTextUppercase}
 \renewcommand{\cftaftertoctitle}{\hfill}
 \renewcommand{\cftchapfont}{ }
 \renewcommand{\cftdot}{.}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftchappagefont}{}
+\renewcommand\cftchappresnum{CHAPTER }
+\cftsetindents{chapter}{0em}{6.5em}
+\setlength{\cftbeforechapskip}{0pt}
+
+\renewcommand{\contentsname}{\textbf{CONTENTS}}
 
 \renewcommand{\cftloftitlefont}{\pagebreak\hfill\MakeTextUppercase}
 \renewcommand{\cftafterloftitle}{\hfill}
@@ -164,33 +170,52 @@
 
     \begin{frontmatter}
 
-    \chapter*{ABSTRACT}
+	\topskip=1in
+    \chapter*{\textbf{ABSTRACT}}
     \addcontentsline{toc}{chapter}{ABSTRACT}
+	\topskip=-1in
 
     \@abstract
 
-    \chapter*{DEDICATION}
+\topskip=1in
+    \chapter*{\textbf{DEDICATION}}
     \addcontentsline{toc}{chapter}{DEDICATION} 
-
     \@dedication
-
+\pagebreak
     %% Print everything in the glossary.
     \glsaddall
-    \printglossary
+    \printglossary[toctitle={LIST OF ABBREVIATIONS AND SYMBOLS},title={\textbf{LIST OF ABBREVIATIONS AND SYMBOLS}}]
     \glsresetall
 
-    \chapter*{ACKNOWLEDGMENTS}
+    \chapter*{\textbf{ACKNOWLEDGMENTS}}
     \addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
 
     \@acknowledgments
+\topskip=-1in
+    %% ToC entries have double spaced but only longer-than-1-lines have single space.
+    \renewcommand\cftchapafterpnum{\vskip12pt}
+    \renewcommand\cftsecafterpnum{\vskip12pt}
+    \renewcommand\cftsubsecafterpnum{\vskip12pt}
+    \begin{spacing}{1}
+      \tableofcontents
+    \end{spacing}
 
-    \tableofcontents
-
+\renewcommand{\listtablename}{\textbf{LIST OF TABLES}}
+        \begin{spacing}{1}
+\renewcommand{\cftlottitlefont}{\vspace*{0in}\hspace{.40\linewidth}\MakeTextUppercase}  
+\pagebreak
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
     \listoftables 
-    \addcontentsline{toc}{chapter}{LIST OF TABLES} 
+    \end{spacing}
+     
 
-    \listoffigures
-    \addcontentsline{toc}{chapter}{LIST OF FIGURES} 
+		\renewcommand{\listfigurename}{\textbf{LIST OF FIGURES}}
+\renewcommand{\cftloftitlefont}{\vspace*{0in}\hspace{.40\linewidth}\MakeTextUppercase}  
+\pagebreak
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\begin{spacing}{1}
+\listoffigures
+\end{spacing}
 
     \end{frontmatter}
 

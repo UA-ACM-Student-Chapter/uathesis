@@ -14,11 +14,11 @@
 \usepackage{cite}                     %% For sorting/collapsing citations.
 \usepackage{color}                    %% For colors used in listings.
 \usepackage{listings}                 %% Code listings (for engineers)
-
+\usepackage[numbers]{natbib}
 %% Includes
 \input{inc/glossary.tex}
 % TODO: If you have any special commands defined, include them here.
-
+\usepackage[titletoc]{appendix}%
 
 %% Required parameters (these default to undefined)
 \author{Joe Somebody}       %% Your name!
@@ -87,14 +87,14 @@ complex and interesting shapes. I could gaze at them for hours.
 \begin{figure}
   \centering
   \includegraphics[width=5.0in]{fig/shapes.pdf}
-  \caption{Some shapes which I find very interesting.}
+  \caption{Some shapes which I find very interesting. (has longer line than 1, so that we can try it in LoF.}
   \label{fig:shapes}
 \end{figure}
 
 \chapter{LITERATURE REVIEW}
 Type or input{} a chapter. \cite{rocket-themoon2167}
 
-\chapter{APPROACH}
+\chapter{APPROACH (BECAUSE A LONGER-THAN-1-LINE CHAPTER TITLE IS IMPORTANT)}
 Take a look at Table \ref{tab:love-shapes}. It shows how much I love certain
 shapes.
 
@@ -119,17 +119,21 @@ Type or input{} a chapter. \cite{rocket-themoon2167}
 
 %% TODO: This is not a fix. This line has to come after the \chapter command
 %% in order for the correct page to be inferred for the table of contents.
-\addcontentsline{toc}{chapter}{REFERENCES}
+\renewcommand{\bibsection}{\topskip=1in\chapter*{REFERENCES}\topskip=0in \addcontentsline{toc}{chapter}{REFERENCES}}
 
 %% Generates the bibliography.
 \bibliographystyle{uathesis-plain}
 \bibliography{thesis-template}
 
-
-%% Appendix chapters.
-\appendix
+\begin{appendices}
+\addtocontents{toc}{\setlength{\cftchapnumwidth}{1em}}
+\renewcommand{\appendixname}{APPENDIX}
+\addtocontents{toc}{\setcounter{tocdepth}{0}}
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{}}
 
 \chapter{A BIG APPENDIX}
+
+\end{appendices}
 
 \end{body}
 \end{document}
