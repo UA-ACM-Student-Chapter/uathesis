@@ -51,6 +51,7 @@
 \usepackage[nonumberlist,xindy,toc,nopostdot,nogroupskip]{glossaries}
 \usepackage{glossary-superragged}
 \setglossarystyle{superragged}
+\setlength{\glsdescwidth}{0.69\textwidth}
 
 \renewcommand{\glossaryname}{LIST OF ABBREVIATIONS AND SYMBOLS}
 
@@ -268,7 +269,9 @@
     \begin{center}
       \MakeTextUppercase{ \textbf{ \@chapapp\space \thechapter } }
       \linebreak
+      \begin{spacing}{1}
       \MakeTextUppercase{ \textbf{ ##1 } }
+      \end{spacing}
     \end{center}
   }
   
