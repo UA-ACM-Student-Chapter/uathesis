@@ -2,4 +2,4 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y texlive-base texlive-common texlive-bibtex-extra
 script:
-  - make
+  - make </dev/null
