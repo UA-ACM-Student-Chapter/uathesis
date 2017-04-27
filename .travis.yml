@@ -1,2 +1,5 @@
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y texlive-core texlive-bibtex-extra
 script:
   - make
