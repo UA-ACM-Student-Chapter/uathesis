@@ -2,7 +2,7 @@ dist: trusty
 sudo: required
 before_install:
   - sudo apt-get -qq update
-  - "sudo apt-get install -y texlive-base texlive-common texlive-bibtex-extra
+  - "sudo apt-get install -y texlive-core texlive-bibtex-extra
     texlive-latex-extra"
 script:
   - make </dev/null
