@@ -49,9 +49,9 @@
 \usepackage{textcase}
 \usepackage{tocloft}
 \usepackage[nonumberlist,xindy,toc,nopostdot,nogroupskip]{glossaries}
-\usepackage{glossary-superragged}
-\setglossarystyle{superragged}
-\setlength{\glsdescwidth}{0.69\textwidth}
+\usepackage{glossary-longragged}
+\setlength{\glsdescwidth}{1.25\textwidth}%
+\setglossarystyle{longragged}
 
 \renewcommand{\glossaryname}{LIST OF ABBREVIATIONS AND SYMBOLS}
 
@@ -171,22 +171,26 @@
 
     \begin{frontmatter}
 
-	\topskip=1in
+\topskip=1in
     \chapter*{\textbf{ABSTRACT}}
     \addcontentsline{toc}{chapter}{ABSTRACT}
-	\topskip=-1in
+\topskip=-1in
 
     \@abstract
-
+    
 \topskip=1in
     \chapter*{\textbf{DEDICATION}}
     \addcontentsline{toc}{chapter}{DEDICATION} 
+    \topskip=-1in
     \@dedication
-\pagebreak
+%\pagebreak
+\renewcommand{\glossarypreamble}{\topskip=-1in}
+\topskip=1in
     %% Print everything in the glossary.
     \glsaddall
     \printglossary[toctitle={LIST OF ABBREVIATIONS AND SYMBOLS},title={\textbf{LIST OF ABBREVIATIONS AND SYMBOLS}}]
     \glsresetall
+
 
     \chapter*{\textbf{ACKNOWLEDGMENTS}}
     \addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
